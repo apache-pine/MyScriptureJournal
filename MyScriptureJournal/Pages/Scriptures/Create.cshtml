@@ -1,0 +1,49 @@
+﻿@page
+@model MyScriptureJournal.Pages.Scriptures.CreateModel
+
+@{
+    ViewData["Title"] = "Add Scripture";
+}
+
+<h1>Add Scripture</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Scripture.Book" class="control-label"></label>
+                <input asp-for="Scripture.Book" class="form-control" />
+                <span asp-validation-for="Scripture.Book" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Scripture.Chapter" class="control-label"></label>
+                <input asp-for="Scripture.Chapter" class="form-control" />
+                <span asp-validation-for="Scripture.Chapter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Scripture.Verse" class="control-label"></label>
+                <input asp-for="Scripture.Verse" class="form-control" />
+                <span asp-validation-for="Scripture.Verse" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Scripture.Notes" class="control-label"></label>
+                <input asp-for="Scripture.Notes" class="form-control" />
+                <span asp-validation-for="Scripture.Notes" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="../Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

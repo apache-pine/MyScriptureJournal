@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
+
+:root {
+    --primary-color: #052639;
+    --secondary-color: #117FA6;
+    --accent1-color: #91D9F3;
+    --accent2-color: #264A1E;
+    --accent3-color: #AFC841;
+    --heading-font: "Roboto", Arial, sans-serif;
+    --paragraph-font: "Oswald", Helvetica, sans-serif;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-size: 20px;
+    font-family: var(--paragraph-font);
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+
+main {
+    max-width: 780px;
+    margin: 1rem auto;
+    line-height: 1.5;
+}
+
+footer, header {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    width: 100%;
+}
+
+button {
+    background-color: var(--secondary-color);
+    padding: 12px 24px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+thead {
+    background: var(--accent2-color);
+    color: white;
+}
+
+table {
+    border: 2px solid black !important;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 440px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
